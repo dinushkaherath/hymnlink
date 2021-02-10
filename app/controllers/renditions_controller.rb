@@ -1,0 +1,2 @@
+class RenditionsController < ApplicationController
+end

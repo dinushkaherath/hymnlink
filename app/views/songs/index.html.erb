@@ -1,5 +1,5 @@
-<ul>
+<ul id="frontpage_song_list">
 <% @songs.each do |song| %>
-  <li><%= link_to song.title, song %></li>
+  <li class="song_listing"><%= link_to song.title, song, :class => "song_link" %></li>
 <% end %>
 </ul>

@@ -13,3 +13,30 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+    max-width: max-content;
+    margin: auto;
+}
+
+ ul#frontpage_song_list {
+    list-style-type: none;
+    /* list-style-position: outside; */
+    border-width: 2em;
+    border-color: crimson;
+ }
+
+ li.song_listing :nth-of-type(even) {
+     background-color: aquamarine;
+ }
+ li.song_listing :nth-of-type(odd) {
+    background-color: cadetblue;
+}
+
+.song_link {
+    text-decoration: none;
+    background-color: darkslateblue;
+}
+.song_link:hover {
+    background-color: deepskyblue;
+}

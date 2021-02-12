@@ -17,6 +17,7 @@
 body {
     max-width: max-content;
     margin: auto;
+    background-color: deepskyblue;
 }
 
  ul#frontpage_song_list {

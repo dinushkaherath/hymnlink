@@ -1,3 +1,28 @@
 // Place all the styles related to the songs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+ul#frontpage_song_list {
+    list-style-type: none;
+    padding: 5px;
+    display: block;
+}
+
+ul#frontpage_song_list li:nth-of-type(1):hover {
+    background-color: red;
+}
+ul#frontpage_song_list li:nth-of-type(2):hover {
+    background-color: red;
+}
+ul#frontpage_song_list li:nth-of-type(1) {
+    background-color: beige;
+}
+ul#frontpage_song_list li:nth-of-type(2) {
+    background-color: cadetblue;
+}
+
+a.song_link, a.song_link:visited {
+    text-decoration: none;
+    color: black;
+    padding: 3px;
+}

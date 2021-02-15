@@ -1,7 +1,7 @@
 <ul id="frontpage_song_list">
-<% @songs.each do |song| %>
-  <li class="song_listing">
-    <%= link_to song.title, song, class:"song_link" %>
-  </li>
-<% end %>
+  <% @songs.each do |song| %>
+    <li class="song_listing">
+      <%= link_to song.title, song, class:"song_link" %>
+    </li>
+  <% end %>
 </ul>

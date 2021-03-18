@@ -12,23 +12,29 @@ session = GoogleDrive::Session.from_config("config.json")
 ws = session.spreadsheet_by_key("160ZPXSLu2PEWggDYos-f4P2SBePKuAJvxB9p2Po7nSI").worksheets[0]
 
 # Gets content of A2 cell.
-p ws[2, 1]  #==> "hoge"
+# p ws[2, 1]  #==> "hoge"
 
 # Changes content of cells.
 # Changes are not sent to the server until you call ws.save().
-ws[2, 1] = "foo"
-ws[2, 2] = "bar"
-ws.save
+# ws[2, 1] = "foo"
+# ws[2, 2] = "bar"
+# ws.save
 
 # Dumps all cells.
-(1..ws.num_rows).each do |row|
-  (1..ws.num_cols).each do |col|
-    p ws[row, col]
-  end
-end
+# (1..ws.num_rows).each do |row|
+#   (1..ws.num_cols).each do |col|
+#     p ws[row, col]
+#   end
+# end
 
 # Yet another way to do so.
-p ws.rows  #==> [["fuga", ""], ["foo", "bar]]
+# p ws.rows  #==> [["fuga", ""], ["foo", "bar]]
+
+
+(1..ws.num_rows).each do |row|
+    s = ws[row]
+    Song.create({title: s[0], alt_title: s[1], hymn_num: s[2], link: s[3]})
+end
 
 # Reloads the worksheet to get changes by other clients.
 ws.reload

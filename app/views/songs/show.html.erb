@@ -3,6 +3,7 @@
 <% @renditions.each do |rendition| %>
   <li>
     <%= soundcloud_link(rendition) %>
+    <%= soundcloud_iframe(rendition) %>
   </li>
 <% end %>
 </ul>

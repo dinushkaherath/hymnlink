@@ -31,7 +31,7 @@ ws = session.spreadsheet_by_key("160ZPXSLu2PEWggDYos-f4P2SBePKuAJvxB9p2Po7nSI").
 # p ws.rows  #==> [["fuga", ""], ["foo", "bar]]
 
 
-(2..ws.num_rows).each do |row|
+(1..ws.num_rows-1).each do |row|
     s = ws.rows[row]
     song = Song.create({title: s[0], alt_title: s[1], hymn_num: s[2]})
     song.renditions.create({link: s[3]})

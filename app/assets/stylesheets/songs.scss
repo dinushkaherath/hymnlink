@@ -8,17 +8,15 @@ ul#frontpage_song_list {
     display: block;
 }
 
-ul#frontpage_song_list li:nth-of-type(1):hover {
-    background-color: red;
-}
-ul#frontpage_song_list li:nth-of-type(2):hover {
-    background-color: red;
-}
-ul#frontpage_song_list li:nth-of-type(1) {
+
+ul#frontpage_song_list li:nth-of-type(odd) {
     background-color: beige;
 }
-ul#frontpage_song_list li:nth-of-type(2) {
+ul#frontpage_song_list li:nth-of-type(even) {
     background-color: cadetblue;
+}
+ul#frontpage_song_list li:hover {
+    background-color: red;
 }
 
 a.song_link, a.song_link:visited {
